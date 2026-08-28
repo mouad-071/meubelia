@@ -1,0 +1,199 @@
+{
+  "meta": {
+    "title": "Meubelia — Mobilier & Décoration",
+    "description": "Meubelia est une boutique de mobilier en ligne qui livre dans le monde entier."
+  },
+  "announcement": {
+    "messages": [
+      "Livraison gratuite sur toutes les commandes",
+      "Profitez de -25% sur notre nouveau service de design d'intérieur"
+    ],
+    "close": "Fermer la bannière"
+  },
+  "nav": {
+    "tagline": "mobilier & décoration",
+    "furniture": "Meubles",
+    "new": "Nouveautés",
+    "garden": "Jardin",
+    "sale": "Promotions",
+    "design": "Design",
+    "service": "Service",
+    "search": "Rechercher",
+    "account": "Compte",
+    "wishlist": "Liste de souhaits",
+    "cart": "Panier",
+    "closeMenu": "Fermer le menu",
+    "language": "Langue"
+  },
+  "megaMenu": {
+    "furnitureHeading": "Meubles",
+    "furnitureAll": "Tout voir",
+    "furnitureItems": [
+      "Canapés",
+      "Fauteuils",
+      "Lits",
+      "Chaises",
+      "Tables",
+      "Commodes & enfilades",
+      "Étagères"
+    ],
+    "gardenHeading": "Jardin",
+    "gardenAll": "Tout voir",
+    "gardenItems": [
+      "Mobilier de jardin",
+      "Chaises de jardin",
+      "Tables de jardin",
+      "Fauteuils de jardin",
+      "Transats de jardin",
+      "Pavillons de jardin",
+      "Balançoires de jardin",
+      "Parasols & accessoires"
+    ],
+    "moreHeading": "Plus",
+    "moreItems": ["Nouveautés", "Promotions", "Design", "Service"],
+    "furnitureCaption": "Meubles",
+    "gardenCaption": "Jardin"
+  },
+  "hero": {
+    "eyebrow": "Sélection : Design italien",
+    "titleLine1": "L'élégance dans la simplicité,",
+    "titleLine2": "en harmonie avec la nature.",
+    "cta": "Découvrir les nouveautés"
+  },
+  "bestSellers": {
+    "heading": "Meilleures ventes",
+    "viewAll": "Tout voir",
+    "addToWishlist": "Ajouter à la liste de souhaits",
+    "products": {
+      "jackson": {
+        "name": "Fauteuil à bascule en velours JACKSON",
+        "collection": "Collection Meubelia",
+        "categoryLabel": "Fauteuils",
+        "description": "Silhouette enveloppante et bascule apaisante : ce fauteuil en velours invite à la détente dans un salon au style intemporel.",
+        "material": "Velours",
+        "materialText": "Un velours doux au toucher et résistant à l'usage quotidien, facile d'entretien — un choix intemporel pour un salon chaleureux.",
+        "materialTags": ["Doux au toucher", "Résistant", "Entretien facile"],
+        "specs": [
+          { "label": "Matériau", "value": "Velours" },
+          { "label": "Accoudoirs", "value": "Oui" },
+          { "label": "Appui-tête", "value": "Oui" },
+          { "label": "Repose-pieds", "value": "Non" },
+          { "label": "Charge maximale", "value": "120 kg" },
+          { "label": "Couleur du corps", "value": "Noir" },
+          { "label": "Matière du corps", "value": "Métal / bois" },
+          { "label": "Profondeur d'assise", "value": "88 cm" },
+          { "label": "Largeur du siège", "value": "67 cm" },
+          { "label": "Hauteur du siège", "value": "95 cm" },
+          { "label": "Largeur du dossier", "value": "49 cm" },
+          { "label": "Fonction bascule", "value": "Oui" }
+        ]
+      },
+      "porto": {
+        "name": "Canapé-lit en velours PORTO",
+        "collection": "Collection Meubelia",
+        "categoryLabel": "Canapés",
+        "description": "Canapé-lit convertible avec coffre de rangement intégré, habillé d'un velours profond pour un salon élégant et fonctionnel.",
+        "material": "Velours",
+        "materialText": "Un velours profond et généreux, traité pour résister au quotidien tout en gardant tout son éclat au fil des années.",
+        "materialTags": ["Convertible", "Coffre de rangement", "Entretien facile"],
+        "specs": [
+          { "label": "Matériau", "value": "Velours" },
+          { "label": "Hauteur du meuble", "value": "88 cm" },
+          { "label": "Largeur du meuble", "value": "198 cm" },
+          { "label": "Profondeur du meuble", "value": "86 cm" },
+          { "label": "Charge maximale", "value": "300 kg" },
+          { "label": "Espace de couchage", "value": "114 × 186 cm" },
+          { "label": "Tissu", "value": "Kronos 19" },
+          { "label": "Coffre de rangement", "value": "Oui" }
+        ]
+      },
+      "dakota": {
+        "name": "Fauteuil DAKOTA en velours/noyer",
+        "collection": "Collection Meubelia",
+        "categoryLabel": "Chaises",
+        "description": "Structure en chêne et assise en tissu bouclé : le fauteuil DAKOTA marie le confort scandinave à une allure sculpturale.",
+        "material": "Chêne & tissu",
+        "materialText": "Une structure en chêne massif associée à un tissu résistant, pour un fauteuil à la fois robuste et élégant.",
+        "materialTags": ["Bois massif", "Tissu résistant", "Fabrication soignée"],
+        "specs": [
+          { "label": "Matériau", "value": "Tissu" },
+          { "label": "Accoudoirs", "value": "Oui" },
+          { "label": "Charge maximale", "value": "120 kg" },
+          { "label": "Couleur du corps", "value": "Chêne" },
+          { "label": "Matière du corps", "value": "Métal" },
+          { "label": "Largeur du siège", "value": "46 cm" },
+          { "label": "Profondeur d'assise", "value": "45 cm" },
+          { "label": "Hauteur de la chaise", "value": "81 cm" },
+          { "label": "Largeur du dossier", "value": "48 cm" },
+          { "label": "Hauteur du dossier", "value": "36 cm" },
+          { "label": "Épaisseur du siège", "value": "5 cm" }
+        ]
+      }
+    },
+    "colors": {
+      "beige": "Beige",
+      "noir": "Noir",
+      "gris": "Gris",
+      "vert": "Vert",
+      "bleu": "Bleu marine",
+      "moutarde": "Moutarde"
+    }
+  },
+  "footer": {
+    "newsletterHeading": "Rejoignez le Club Meubelia, -15% pour votre anniversaire",
+    "emailPlaceholder": "Entrez votre adresse email",
+    "emailSubmit": "S'inscrire",
+    "consent": "En soumettant votre email, vous acceptez de recevoir des emails publicitaires de Meubelia.",
+    "social": "Réseaux sociaux",
+    "copyright": "© {year} Meubelia. Tous droits réservés.",
+    "aboutHeading": "À propos de Meubelia",
+    "aboutLinks": [
+      "Collection",
+      "Durabilité",
+      "Politique de confidentialité",
+      "Système d'assistance",
+      "Conditions générales",
+      "Mentions légales"
+    ],
+    "helpHeading": "Aide & Support",
+    "helpLinks": [
+      "Commandes & Livraison",
+      "Retours & Remboursements",
+      "FAQ",
+      "Contact"
+    ],
+    "joinHeading": "Nous rejoindre",
+    "joinLinks": ["Club Meubelia", "Carrières", "Nous rendre visite"],
+    "chat": "Contacter le support"
+  },
+  "collection": {
+    "heading": "Collection",
+    "categories": {
+      "canapes": "Canapés",
+      "chaises": "Chaises",
+      "tables": "Tables",
+      "lits": "Lits"
+    }
+  },
+  "sustainability": {
+    "tag": "Durabilité",
+    "text": "Des matières nobles et un savoir-faire durable, pensés pour traverser le temps et respecter la nature."
+  },
+  "productDetail": {
+    "breadcrumbHome": "Accueil",
+    "quantity": "Quantité",
+    "colors": "Couleurs",
+    "addToCart": "Ajouter au panier",
+    "addedToCart": "Ajouté au panier",
+    "delivery": "Livraison sous 2 à 3 semaines",
+    "easyReturn": "Retour gratuit sous 30 jours",
+    "addToWishlist": "Ajouter à la liste de souhaits",
+    "inWishlist": "Dans votre liste de souhaits",
+    "specsHeading": "Caractéristiques",
+    "shippingHeading": "Livraison & Retours",
+    "shippingText": "Livraison estimée sous 2 à 3 semaines. Suivi de commande disponible dès l'expédition.",
+    "returnsText": "Retours gratuits sous 30 jours sur les articles non utilisés, dans leur emballage d'origine.",
+    "youMayAlsoLike": "Vous aimerez aussi",
+    "thumbnailAlt": "Voir la vue {index} du produit"
+  }
+}
