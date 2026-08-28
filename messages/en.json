@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "title": "Meubelia — Furniture & Decor",
+    "description": "Meubelia is an online furniture store shipping worldwide."
+  },
+  "announcement": {
+    "messages": [
+      "Enjoy Free Shipping On All Orders",
+      "Get 25% Off Our New Interior Design Service"
+    ],
+    "close": "Close banner"
+  },
+  "nav": {
+    "tagline": "furniture & decor",
+    "furniture": "Furniture",
+    "new": "New In",
+    "garden": "Garden",
+    "sale": "Sale",
+    "design": "Design",
+    "service": "Service",
+    "search": "Search",
+    "account": "Account",
+    "wishlist": "Wishlist",
+    "cart": "Cart",
+    "closeMenu": "Close menu",
+    "language": "Language"
+  },
+  "megaMenu": {
+    "furnitureHeading": "Furniture",
+    "furnitureAll": "Shop All",
+    "furnitureItems": [
+      "Sofas",
+      "Armchairs",
+      "Beds",
+      "Chairs",
+      "Tables",
+      "Dressers & Sideboards",
+      "Shelving"
+    ],
+    "gardenHeading": "Garden",
+    "gardenAll": "Shop All",
+    "gardenItems": [
+      "Garden Furniture",
+      "Garden Chairs",
+      "Garden Tables",
+      "Garden Armchairs",
+      "Sun Loungers",
+      "Garden Pavilions",
+      "Garden Swings",
+      "Parasols & Accessories"
+    ],
+    "moreHeading": "More",
+    "moreItems": ["New In", "Sale", "Design", "Service"],
+    "furnitureCaption": "Furniture",
+    "gardenCaption": "Garden"
+  },
+  "hero": {
+    "eyebrow": "Selection: Italian Design",
+    "titleLine1": "Elegance in simplicity,",
+    "titleLine2": "in harmony with nature.",
+    "cta": "Discover New In"
+  },
+  "bestSellers": {
+    "heading": "Best Sellers",
+    "viewAll": "View All",
+    "addToWishlist": "Add to wishlist",
+    "products": {
+      "jackson": {
+        "name": "JACKSON Velvet Swivel Armchair",
+        "collection": "Meubelia Collection",
+        "categoryLabel": "Armchairs",
+        "description": "An enveloping silhouette and a soothing rocking motion — this velvet armchair invites relaxation into any timeless living room.",
+        "material": "Velvet",
+        "materialText": "A velvet that's soft to the touch and resistant to everyday use, easy to care for — a timeless choice for a warm living room.",
+        "materialTags": ["Soft to the touch", "Durable", "Easy to clean"],
+        "specs": [
+          { "label": "Material", "value": "Velvet" },
+          { "label": "Armrests", "value": "Yes" },
+          { "label": "Headrest", "value": "Yes" },
+          { "label": "Footrest", "value": "No" },
+          { "label": "Max load", "value": "120 kg" },
+          { "label": "Frame colour", "value": "Black" },
+          { "label": "Frame material", "value": "Metal / wood" },
+          { "label": "Seat depth", "value": "88 cm" },
+          { "label": "Seat width", "value": "67 cm" },
+          { "label": "Seat height", "value": "95 cm" },
+          { "label": "Backrest width", "value": "49 cm" },
+          { "label": "Rocking function", "value": "Yes" }
+        ]
+      },
+      "porto": {
+        "name": "PORTO Velvet Sofa Bed",
+        "collection": "Meubelia Collection",
+        "categoryLabel": "Sofas",
+        "description": "A convertible sofa bed with built-in storage, upholstered in a deep velvet for an elegant and functional living room.",
+        "material": "Velvet",
+        "materialText": "A deep, generous velvet, treated to resist everyday use while keeping its lustre for years to come.",
+        "materialTags": ["Convertible", "Storage box", "Easy to clean"],
+        "specs": [
+          { "label": "Material", "value": "Velvet" },
+          { "label": "Furniture height", "value": "88 cm" },
+          { "label": "Furniture width", "value": "198 cm" },
+          { "label": "Furniture depth", "value": "86 cm" },
+          { "label": "Max load", "value": "300 kg" },
+          { "label": "Sleeping area", "value": "114 × 186 cm" },
+          { "label": "Fabric", "value": "Kronos 19" },
+          { "label": "Storage box", "value": "Yes" }
+        ]
+      },
+      "dakota": {
+        "name": "DAKOTA Velvet & Walnut Armchair",
+        "collection": "Meubelia Collection",
+        "categoryLabel": "Chairs",
+        "description": "An oak frame paired with a bouclé fabric seat: the DAKOTA armchair blends Scandinavian comfort with a sculptural look.",
+        "material": "Oak & fabric",
+        "materialText": "A solid oak frame paired with a hard-wearing fabric, for an armchair that's both sturdy and elegant.",
+        "materialTags": ["Solid wood", "Durable fabric", "Careful craftsmanship"],
+        "specs": [
+          { "label": "Material", "value": "Fabric" },
+          { "label": "Armrests", "value": "Yes" },
+          { "label": "Max load", "value": "120 kg" },
+          { "label": "Frame colour", "value": "Oak" },
+          { "label": "Frame material", "value": "Metal" },
+          { "label": "Seat width", "value": "46 cm" },
+          { "label": "Seat depth", "value": "45 cm" },
+          { "label": "Chair height", "value": "81 cm" },
+          { "label": "Backrest width", "value": "48 cm" },
+          { "label": "Backrest height", "value": "36 cm" },
+          { "label": "Seat thickness", "value": "5 cm" }
+        ]
+      }
+    },
+    "colors": {
+      "beige": "Beige",
+      "noir": "Black",
+      "gris": "Grey",
+      "vert": "Green",
+      "bleu": "Navy",
+      "moutarde": "Mustard"
+    }
+  },
+  "footer": {
+    "newsletterHeading": "Join Our Club, Get 15% Off For Your Birthday",
+    "emailPlaceholder": "Enter Your Email Address",
+    "emailSubmit": "Subscribe",
+    "consent": "By submitting your email, you agree to receive advertising emails from Meubelia.",
+    "social": "Social media",
+    "copyright": "© {year} Meubelia. All Rights Reserved.",
+    "aboutHeading": "About Meubelia",
+    "aboutLinks": [
+      "Collection",
+      "Sustainability",
+      "Privacy Policy",
+      "Support System",
+      "Terms & Conditions",
+      "Copyright Notice"
+    ],
+    "helpHeading": "Help & Support",
+    "helpLinks": ["Orders & Shipping", "Returns & Refunds", "FAQs", "Contact Us"],
+    "joinHeading": "Join Up",
+    "joinLinks": ["Meubelia Club", "Careers", "Visit Us"],
+    "chat": "Contact support"
+  },
+  "collection": {
+    "heading": "Collection",
+    "categories": {
+      "canapes": "Sofas",
+      "chaises": "Chairs",
+      "tables": "Tables",
+      "lits": "Beds"
+    }
+  },
+  "sustainability": {
+    "tag": "Sustainability",
+    "text": "Noble materials and lasting craftsmanship, designed to stand the test of time and respect nature."
+  },
+  "productDetail": {
+    "breadcrumbHome": "Home",
+    "quantity": "Quantity",
+    "colors": "Colors",
+    "addToCart": "Add To Cart",
+    "addedToCart": "Added To Cart",
+    "delivery": "Delivery within 2-3 weeks",
+    "easyReturn": "Free returns within 30 days",
+    "addToWishlist": "Add To Wish List",
+    "inWishlist": "In your wish list",
+    "specsHeading": "Specifications",
+    "shippingHeading": "Shipping And Return",
+    "shippingText": "Estimated delivery within 2-3 weeks. Order tracking available once shipped.",
+    "returnsText": "Free returns within 30 days on unused items, in their original packaging.",
+    "youMayAlsoLike": "You May Also Like",
+    "thumbnailAlt": "View image {index} of the product"
+  }
+}
