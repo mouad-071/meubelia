@@ -38,3 +38,11 @@ export function apiBaseUrl(): string {
 
   return process.env.API_URL ?? publicApiUrl;
 }
+
+/**
+ * Origin of the API, i.e. the base URL without its `/api` path. Sanctum's
+ * CSRF cookie endpoint lives there rather than under the API prefix.
+ */
+export function apiOrigin(): string {
+  return apiBaseUrl().replace(/\/?api\/?$/, "").replace(/\/$/, "");
+}

@@ -122,7 +122,12 @@ export function MobileMenu() {
 
           <AnimatedRow open={open} index={rowIndex++}>
             <div className="flex flex-col py-2">
-              <IconRow icon={<UserIcon className="size-4" />} label={t("account")} />
+              <IconRow
+                icon={<UserIcon className="size-4" />}
+                label={t("account")}
+                href="/login"
+                onNavigate={() => setOpen(false)}
+              />
               <IconRow icon={<HeartIcon className="size-4" />} label={t("wishlist")} />
             </div>
           </AnimatedRow>
@@ -215,11 +220,37 @@ function AccordionRow({
   );
 }
 
-function IconRow({ icon, label }: { icon: ReactNode; label: string }) {
-  return (
-    <div className="flex items-center gap-3 py-2.5 text-sm text-ink">
+function IconRow({
+  icon,
+  label,
+  href,
+  onNavigate,
+}: {
+  icon: ReactNode;
+  label: string;
+  href?: "/login";
+  onNavigate?: () => void;
+}) {
+  const content = (
+    <>
       {icon}
       {label}
-    </div>
+    </>
+  );
+
+  if (!href) {
+    return (
+      <div className="flex items-center gap-3 py-2.5 text-sm text-ink">{content}</div>
+    );
+  }
+
+  return (
+    <Link
+      href={href}
+      onClick={onNavigate}
+      className="flex items-center gap-3 py-2.5 text-sm text-ink"
+    >
+      {content}
+    </Link>
   );
 }

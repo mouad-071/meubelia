@@ -50,7 +50,12 @@
       "Parasols & Accessories"
     ],
     "moreHeading": "More",
-    "moreItems": ["New In", "Sale", "Design", "Service"],
+    "moreItems": [
+      "New In",
+      "Sale",
+      "Design",
+      "Service"
+    ],
     "furnitureCaption": "Furniture",
     "gardenCaption": "Garden"
   },
@@ -72,20 +77,60 @@
         "description": "An enveloping silhouette and a soothing rocking motion — this velvet armchair invites relaxation into any timeless living room.",
         "material": "Velvet",
         "materialText": "A velvet that's soft to the touch and resistant to everyday use, easy to care for — a timeless choice for a warm living room.",
-        "materialTags": ["Soft to the touch", "Durable", "Easy to clean"],
+        "materialTags": [
+          "Soft to the touch",
+          "Durable",
+          "Easy to clean"
+        ],
         "specs": [
-          { "label": "Material", "value": "Velvet" },
-          { "label": "Armrests", "value": "Yes" },
-          { "label": "Headrest", "value": "Yes" },
-          { "label": "Footrest", "value": "No" },
-          { "label": "Max load", "value": "120 kg" },
-          { "label": "Frame colour", "value": "Black" },
-          { "label": "Frame material", "value": "Metal / wood" },
-          { "label": "Seat depth", "value": "88 cm" },
-          { "label": "Seat width", "value": "67 cm" },
-          { "label": "Seat height", "value": "95 cm" },
-          { "label": "Backrest width", "value": "49 cm" },
-          { "label": "Rocking function", "value": "Yes" }
+          {
+            "label": "Material",
+            "value": "Velvet"
+          },
+          {
+            "label": "Armrests",
+            "value": "Yes"
+          },
+          {
+            "label": "Headrest",
+            "value": "Yes"
+          },
+          {
+            "label": "Footrest",
+            "value": "No"
+          },
+          {
+            "label": "Max load",
+            "value": "120 kg"
+          },
+          {
+            "label": "Frame colour",
+            "value": "Black"
+          },
+          {
+            "label": "Frame material",
+            "value": "Metal / wood"
+          },
+          {
+            "label": "Seat depth",
+            "value": "88 cm"
+          },
+          {
+            "label": "Seat width",
+            "value": "67 cm"
+          },
+          {
+            "label": "Seat height",
+            "value": "95 cm"
+          },
+          {
+            "label": "Backrest width",
+            "value": "49 cm"
+          },
+          {
+            "label": "Rocking function",
+            "value": "Yes"
+          }
         ]
       },
       "porto": {
@@ -95,16 +140,44 @@
         "description": "A convertible sofa bed with built-in storage, upholstered in a deep velvet for an elegant and functional living room.",
         "material": "Velvet",
         "materialText": "A deep, generous velvet, treated to resist everyday use while keeping its lustre for years to come.",
-        "materialTags": ["Convertible", "Storage box", "Easy to clean"],
+        "materialTags": [
+          "Convertible",
+          "Storage box",
+          "Easy to clean"
+        ],
         "specs": [
-          { "label": "Material", "value": "Velvet" },
-          { "label": "Furniture height", "value": "88 cm" },
-          { "label": "Furniture width", "value": "198 cm" },
-          { "label": "Furniture depth", "value": "86 cm" },
-          { "label": "Max load", "value": "300 kg" },
-          { "label": "Sleeping area", "value": "114 × 186 cm" },
-          { "label": "Fabric", "value": "Kronos 19" },
-          { "label": "Storage box", "value": "Yes" }
+          {
+            "label": "Material",
+            "value": "Velvet"
+          },
+          {
+            "label": "Furniture height",
+            "value": "88 cm"
+          },
+          {
+            "label": "Furniture width",
+            "value": "198 cm"
+          },
+          {
+            "label": "Furniture depth",
+            "value": "86 cm"
+          },
+          {
+            "label": "Max load",
+            "value": "300 kg"
+          },
+          {
+            "label": "Sleeping area",
+            "value": "114 × 186 cm"
+          },
+          {
+            "label": "Fabric",
+            "value": "Kronos 19"
+          },
+          {
+            "label": "Storage box",
+            "value": "Yes"
+          }
         ]
       },
       "dakota": {
@@ -114,19 +187,56 @@
         "description": "An oak frame paired with a bouclé fabric seat: the DAKOTA armchair blends Scandinavian comfort with a sculptural look.",
         "material": "Oak & fabric",
         "materialText": "A solid oak frame paired with a hard-wearing fabric, for an armchair that's both sturdy and elegant.",
-        "materialTags": ["Solid wood", "Durable fabric", "Careful craftsmanship"],
+        "materialTags": [
+          "Solid wood",
+          "Durable fabric",
+          "Careful craftsmanship"
+        ],
         "specs": [
-          { "label": "Material", "value": "Fabric" },
-          { "label": "Armrests", "value": "Yes" },
-          { "label": "Max load", "value": "120 kg" },
-          { "label": "Frame colour", "value": "Oak" },
-          { "label": "Frame material", "value": "Metal" },
-          { "label": "Seat width", "value": "46 cm" },
-          { "label": "Seat depth", "value": "45 cm" },
-          { "label": "Chair height", "value": "81 cm" },
-          { "label": "Backrest width", "value": "48 cm" },
-          { "label": "Backrest height", "value": "36 cm" },
-          { "label": "Seat thickness", "value": "5 cm" }
+          {
+            "label": "Material",
+            "value": "Fabric"
+          },
+          {
+            "label": "Armrests",
+            "value": "Yes"
+          },
+          {
+            "label": "Max load",
+            "value": "120 kg"
+          },
+          {
+            "label": "Frame colour",
+            "value": "Oak"
+          },
+          {
+            "label": "Frame material",
+            "value": "Metal"
+          },
+          {
+            "label": "Seat width",
+            "value": "46 cm"
+          },
+          {
+            "label": "Seat depth",
+            "value": "45 cm"
+          },
+          {
+            "label": "Chair height",
+            "value": "81 cm"
+          },
+          {
+            "label": "Backrest width",
+            "value": "48 cm"
+          },
+          {
+            "label": "Backrest height",
+            "value": "36 cm"
+          },
+          {
+            "label": "Seat thickness",
+            "value": "5 cm"
+          }
         ]
       }
     },
@@ -156,9 +266,18 @@
       "Copyright Notice"
     ],
     "helpHeading": "Help & Support",
-    "helpLinks": ["Orders & Shipping", "Returns & Refunds", "FAQs", "Contact Us"],
+    "helpLinks": [
+      "Orders & Shipping",
+      "Returns & Refunds",
+      "FAQs",
+      "Contact Us"
+    ],
     "joinHeading": "Join Up",
-    "joinLinks": ["Meubelia Club", "Careers", "Visit Us"],
+    "joinLinks": [
+      "Meubelia Club",
+      "Careers",
+      "Visit Us"
+    ],
     "chat": "Contact support"
   },
   "collection": {
@@ -190,5 +309,76 @@
     "returnsText": "Free returns within 30 days on unused items, in their original packaging.",
     "youMayAlsoLike": "You May Also Like",
     "thumbnailAlt": "View image {index} of the product"
+  },
+  "auth": {
+    "pending": "Please wait…",
+    "or": "Or",
+    "social": {
+      "apple": "Continue with Apple",
+      "google": "Continue with Google",
+      "facebook": "Continue with Facebook"
+    },
+    "fields": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "password": "Password",
+      "passwordHint": "At least {min} characters.",
+      "showPassword": "Show password",
+      "hidePassword": "Hide password"
+    },
+    "login": {
+      "metaTitle": "Log in",
+      "metaDescription": "Log in to your Meubelia account to track your orders and find your saved pieces.",
+      "title": "Log In",
+      "submit": "Log In",
+      "forgot": "Forgot your password?",
+      "noAccount": "New to Meubelia?",
+      "createAccount": "Create an account"
+    },
+    "register": {
+      "metaTitle": "Create account",
+      "metaDescription": "Create your Meubelia account to order, track deliveries and save your favourite pieces.",
+      "title": "Create Account",
+      "submit": "Register Now",
+      "hasAccount": "Already have an account?",
+      "signIn": "Log In",
+      "legal": "By clicking “Register Now” you agree to the <terms>terms & conditions</terms> and the <privacy>privacy policy</privacy>."
+    },
+    "verifyEmail": {
+      "title": "Verify your email address",
+      "body": "We've sent an email to {email} to verify your email address and activate your account. The link in the email will expire in 24 hours.",
+      "changeLink": "Click here",
+      "changeHint": "if you did not receive an email or would like to change the email address you registered with."
+    },
+    "welcome": {
+      "title": "Welcome to Meubelia",
+      "tagline": "Elegance in simplicity, in harmony with nature.",
+      "question": "Is it your first experience on Meubelia?",
+      "cta": "Create your own style"
+    },
+    "errors": {
+      "nameRequired": "This field is required.",
+      "nameTooShort": "This field must be at least 2 characters long.",
+      "emailRequired": "Please enter your email address.",
+      "emailInvalid": "This email address is not valid.",
+      "passwordRequired": "Please enter your password.",
+      "passwordTooShort": "Your password must be at least 8 characters long.",
+      "invalidCredentials": "Incorrect email or password.",
+      "tooManyAttempts": "Too many attempts. Please try again in a moment.",
+      "generic": "Something went wrong. Check your connection and try again."
+    }
+  },
+  "common": {
+    "close": "Close"
+  },
+  "search": {
+    "placeholder": "Search",
+    "close": "Close search",
+    "suggestions": "Suggestions",
+    "categories": "Categories",
+    "products": "Products",
+    "viewMore": "View more",
+    "noResults": "No results for “{query}”."
   }
 }
