@@ -9,6 +9,8 @@ import { MobileMenu } from "./MobileMenu";
 import { SearchIcon, UserIcon } from "@/components/icons";
 import { CartTrigger } from "@/components/cart/CartTrigger";
 import { WishlistTrigger } from "@/components/wishlist/WishlistTrigger";
+import { UserIcon, HeartIcon, BagIcon } from "@/components/icons";
+import { HeaderSearch } from "@/components/search/HeaderSearch";
 
 export function SiteHeader() {
   const t = useTranslations("nav");
@@ -35,11 +37,9 @@ export function SiteHeader() {
         </Link>
 
         <div className="flex flex-1 items-center justify-end gap-4 text-ink sm:gap-5">
-          <button type="button" aria-label={t("search")} className="cursor-pointer">
-            <SearchIcon className="size-5" />
-          </button>
-          <button
-            type="button"
+          <HeaderSearch />
+          <Link
+            href="/login"
             aria-label={t("account")}
             className="hidden cursor-pointer lg:inline-flex"
           >
@@ -47,6 +47,17 @@ export function SiteHeader() {
           </button>
           <WishlistTrigger className="hidden lg:inline-flex" />
           <CartTrigger />
+          </Link>
+          <button
+            type="button"
+            aria-label={t("wishlist")}
+            className="hidden cursor-pointer lg:inline-flex"
+          >
+            <HeartIcon className="size-5" />
+          </button>
+          <button type="button" aria-label={t("cart")} className="cursor-pointer">
+            <BagIcon className="size-5" />
+          </button>
         </div>
       </div>
 

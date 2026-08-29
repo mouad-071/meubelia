@@ -136,6 +136,13 @@ export function MobileMenu() {
                 count={wishlist.count}
                 onClick={() => setWishlistOpen(true)}
               />
+              <IconRow
+                icon={<UserIcon className="size-4" />}
+                label={t("account")}
+                href="/login"
+                onNavigate={() => setOpen(false)}
+              />
+              <IconRow icon={<HeartIcon className="size-4" />} label={t("wishlist")} />
             </div>
           </AnimatedRow>
         </div>
@@ -239,6 +246,13 @@ function IconRow({
   label: string;
   count?: number;
   onClick?: () => void;
+  href,
+  onNavigate,
+}: {
+  icon: ReactNode;
+  label: string;
+  href?: "/login";
+  onNavigate?: () => void;
 }) {
   const content = (
     <>
@@ -261,10 +275,22 @@ function IconRow({
       >
         {content}
       </button>
+    </>
+  );
+
+  if (!href) {
+    return (
+      <div className="flex items-center gap-3 py-2.5 text-sm text-ink">{content}</div>
     );
   }
 
   return (
-    <div className="flex items-center gap-3 py-2.5 text-sm text-ink">{content}</div>
+    <Link
+      href={href}
+      onClick={onNavigate}
+      className="flex items-center gap-3 py-2.5 text-sm text-ink"
+    >
+      {content}
+    </Link>
   );
 }
