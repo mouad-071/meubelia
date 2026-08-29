@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { SiteHeader } from "@/components/layout/SiteHeader";
-import { Footer } from "@/components/layout/Footer";
 import { AuthLayout } from "@/components/auth/AuthLayout";
 import { LoginForm } from "@/components/auth/LoginForm";
 import { routing } from "@/i18n/routing";
@@ -32,14 +30,10 @@ export default async function LoginPage({ params }: PageProps<"/[locale]/login">
   const t = await getTranslations("auth.login");
 
   return (
-    <>
-      <SiteHeader />
-      <main className="flex-1 bg-white">
-        <AuthLayout title={t("title")}>
-          <LoginForm />
-        </AuthLayout>
-      </main>
-      <Footer />
-    </>
+    <div className="bg-white">
+      <AuthLayout title={t("title")}>
+        <LoginForm />
+      </AuthLayout>
+    </div>
   );
 }

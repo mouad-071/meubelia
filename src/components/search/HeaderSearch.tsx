@@ -2,25 +2,29 @@
 
 import Image from "next/image";
 import { useEffect, useId, useRef, useState } from "react";
-import { createPortal } from "react-dom";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { CloseIcon, SearchIcon } from "@/components/icons";
 import { HighlightMatch } from "@/components/search/HighlightMatch";
 import { useSearchResults } from "@/components/search/useSearchResults";
+import { useOverlayPanel } from "@/lib/overlay-context";
 
 /**
  * Search entry point in the header. The toggle sits in the icon row and the
  * panel is positioned against the (sticky, therefore positioned) <header>,
- * so it opens as a full-width sheet underneath the navigation.
+ * so it opens as a full-width sheet underneath the navigation. The wrapper
+ * uses `display: contents` so it doesn't become the panel's positioning
+ * context (the header stays that) while still giving the outside-click
+ * check a single DOM node to test against.
  */
 export function HeaderSearch() {
   const t = useTranslations("search");
   const tNav = useTranslations("nav");
   const panelId = useId();
   const inputRef = useRef<HTMLInputElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const [open, setOpen] = useState(false);
+  const { open, show, hide } = useOverlayPanel();
   const [query, setQuery] = useState("");
 
   const results = useSearchResults(query);
@@ -31,28 +35,34 @@ export function HeaderSearch() {
 
     inputRef.current?.focus();
 
-    function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") setOpen(false);
+    function handlePointerDown(event: PointerEvent) {
+      if (!containerRef.current?.contains(event.target as Node)) {
+        hide();
+      }
     }
 
-    document.body.style.overflow = "hidden";
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") hide();
+    }
+
+    document.addEventListener("pointerdown", handlePointerDown);
     document.addEventListener("keydown", handleKeyDown);
     return () => {
-      document.body.style.overflow = "";
+      document.removeEventListener("pointerdown", handlePointerDown);
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [open]);
+  }, [open, hide]);
 
   function close() {
-    setOpen(false);
+    hide();
     setQuery("");
   }
 
   return (
-    <>
+    <div ref={containerRef} className="contents">
       <button
         type="button"
-        onClick={() => (open ? close() : setOpen(true))}
+        onClick={() => (open ? close() : show())}
         aria-label={open ? t("close") : tNav("search")}
         aria-expanded={open}
         aria-controls={panelId}
@@ -63,20 +73,6 @@ export function HeaderSearch() {
 
       {open ? (
         <>
-          {/*
-            Dims the page beneath the header. Portalled to <body> so it is not
-            trapped in the header's stacking context, where it would paint over
-            the panel; the header's own z-50 keeps it above the dim.
-          */}
-          {createPortal(
-            <div
-              className="fixed inset-0 z-40 bg-black/30"
-              aria-hidden="true"
-              onClick={close}
-            />,
-            document.body,
-          )}
-
           <div
             id={panelId}
             className="absolute inset-x-0 top-full max-h-[75dvh] overflow-y-auto border-t border-line bg-white"
@@ -171,7 +167,7 @@ export function HeaderSearch() {
           </div>
         </>
       ) : null}
-    </>
+    </div>
   );
 }
 
