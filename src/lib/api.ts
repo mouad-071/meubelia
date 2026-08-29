@@ -64,6 +64,7 @@ export async function apiFetch<T>(
     credentials: init.credentials ?? "include",
     headers: {
       Accept: "application/json",
+      ...xsrfHeader(init.method),
       ...(isFormData ? {} : body !== undefined
         ? { "Content-Type": "application/json" }
         : {}),
@@ -103,4 +104,28 @@ export async function apiFetchPaginated<T>(
 
 function isEnvelope(value: unknown): value is { success: unknown } {
   return typeof value === "object" && value !== null && "success" in value;
+}
+
+/**
+ * Sanctum expects the XSRF-TOKEN cookie echoed back as a header on unsafe
+ * requests. Only available in the browser; server-side calls authenticate
+ * differently and skip this.
+ */
+function xsrfHeader(method: string | undefined): Record<string, string> {
+  if (typeof document === "undefined") {
+    return {};
+  }
+
+  const safe = !method || ["GET", "HEAD", "OPTIONS"].includes(method.toUpperCase());
+
+  if (safe) {
+    return {};
+  }
+
+  const token = document.cookie
+    .split("; ")
+    .find((entry) => entry.startsWith("XSRF-TOKEN="))
+    ?.split("=")[1];
+
+  return token ? { "X-XSRF-TOKEN": decodeURIComponent(token) } : {};
 }

@@ -1,10 +1,15 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { AnnouncementBar } from "./AnnouncementBar";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 import { MainNav } from "./MainNav";
 import { MobileMenu } from "./MobileMenu";
-import { SearchIcon, UserIcon, HeartIcon, BagIcon } from "@/components/icons";
+import { UserIcon } from "@/components/icons";
+import { CartTrigger } from "@/components/cart/CartTrigger";
+import { WishlistTrigger } from "@/components/wishlist/WishlistTrigger";
+import { HeaderSearch } from "@/components/search/HeaderSearch";
 
 export function SiteHeader() {
   const t = useTranslations("nav");
@@ -31,26 +36,16 @@ export function SiteHeader() {
         </Link>
 
         <div className="flex flex-1 items-center justify-end gap-4 text-ink sm:gap-5">
-          <button type="button" aria-label={t("search")} className="cursor-pointer">
-            <SearchIcon className="size-5" />
-          </button>
-          <button
-            type="button"
+          <HeaderSearch />
+          <Link
+            href="/login"
             aria-label={t("account")}
             className="hidden cursor-pointer lg:inline-flex"
           >
             <UserIcon className="size-5" />
-          </button>
-          <button
-            type="button"
-            aria-label={t("wishlist")}
-            className="hidden cursor-pointer lg:inline-flex"
-          >
-            <HeartIcon className="size-5" />
-          </button>
-          <button type="button" aria-label={t("cart")} className="cursor-pointer">
-            <BagIcon className="size-5" />
-          </button>
+          </Link>
+          <WishlistTrigger className="hidden lg:inline-flex" />
+          <CartTrigger />
         </div>
       </div>
 

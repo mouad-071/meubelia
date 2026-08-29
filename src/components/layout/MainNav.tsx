@@ -1,13 +1,14 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { ChevronDownIcon } from "@/components/icons";
+import { useOverlayPanel } from "@/lib/overlay-context";
 import { MegaMenu } from "./MegaMenu";
 
 export function MainNav() {
   const t = useTranslations("nav");
-  const [open, setOpen] = useState(false);
+  const { open, toggle, hide } = useOverlayPanel();
   const navRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -15,12 +16,12 @@ export function MainNav() {
 
     function handlePointerDown(event: PointerEvent) {
       if (!navRef.current?.contains(event.target as Node)) {
-        setOpen(false);
+        hide();
       }
     }
 
     function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") setOpen(false);
+      if (event.key === "Escape") hide();
     }
 
     document.addEventListener("pointerdown", handlePointerDown);
@@ -29,7 +30,7 @@ export function MainNav() {
       document.removeEventListener("pointerdown", handlePointerDown);
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [open]);
+  }, [open, hide]);
 
   const links = [
     { label: t("new") },
@@ -44,7 +45,7 @@ export function MainNav() {
       <nav className="flex items-center justify-center gap-8 px-10 py-4">
         <button
           type="button"
-          onClick={() => setOpen((v) => !v)}
+          onClick={toggle}
           aria-expanded={open}
           className="flex shrink-0 items-center gap-1 text-sm tracking-wide text-ink transition-colors hover:text-olive"
         >

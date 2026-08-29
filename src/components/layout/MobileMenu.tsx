@@ -11,6 +11,9 @@ import {
   UserIcon,
   HeartIcon,
 } from "@/components/icons";
+import { useOverlayPanel } from "@/lib/overlay-context";
+import { useWishlist } from "@/lib/wishlist-context";
+import { WishlistDrawer } from "@/components/wishlist/WishlistDrawer";
 
 type Section = "furniture" | "garden" | null;
 
@@ -23,14 +26,16 @@ export function MobileMenu() {
   const locale = useLocale();
   const pathname = usePathname();
 
-  const [open, setOpen] = useState(false);
   const [section, setSection] = useState<Section>(null);
+  const { open, show, hide } = useOverlayPanel();
+  const wishlistPanel = useOverlayPanel();
+  const wishlist = useWishlist();
 
   useEffect(() => {
     if (!open) return;
 
     function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") setOpen(false);
+      if (event.key === "Escape") hide();
     }
 
     document.body.style.overflow = "hidden";
@@ -39,7 +44,7 @@ export function MobileMenu() {
       document.body.style.overflow = "";
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [open]);
+  }, [open, hide]);
 
   const furnitureItems = tMenu.raw("furnitureItems") as string[];
   const gardenItems = tMenu.raw("gardenItems") as string[];
@@ -51,7 +56,7 @@ export function MobileMenu() {
     <>
       <button
         type="button"
-        onClick={() => setOpen(true)}
+        onClick={show}
         aria-label={t("furniture")}
         aria-expanded={open}
         className="cursor-pointer lg:hidden"
@@ -61,7 +66,7 @@ export function MobileMenu() {
 
       <div
         aria-hidden={!open}
-        onClick={() => setOpen(false)}
+        onClick={hide}
         className={`fixed inset-0 z-[60] bg-black/20 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
           open ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
@@ -80,7 +85,7 @@ export function MobileMenu() {
           </span>
           <button
             type="button"
-            onClick={() => setOpen(false)}
+            onClick={hide}
             aria-label={t("closeMenu")}
             className="cursor-pointer"
           >
@@ -122,8 +127,18 @@ export function MobileMenu() {
 
           <AnimatedRow open={open} index={rowIndex++}>
             <div className="flex flex-col py-2">
-              <IconRow icon={<UserIcon className="size-4" />} label={t("account")} />
-              <IconRow icon={<HeartIcon className="size-4" />} label={t("wishlist")} />
+              <IconRow
+                icon={<UserIcon className="size-4" />}
+                label={t("account")}
+                href="/login"
+                onNavigate={hide}
+              />
+              <IconRow
+                icon={<HeartIcon className="size-4" />}
+                label={t("wishlist")}
+                count={wishlist.count}
+                onClick={wishlistPanel.show}
+              />
             </div>
           </AnimatedRow>
         </div>
@@ -140,7 +155,7 @@ export function MobileMenu() {
                   <Link
                     href={pathname}
                     locale={loc}
-                    onClick={() => setOpen(false)}
+                    onClick={hide}
                     className={
                       loc === locale ? "text-ink" : "text-ink/50 hover:text-ink"
                     }
@@ -153,6 +168,8 @@ export function MobileMenu() {
           </div>
         </AnimatedRow>
       </div>
+
+      <WishlistDrawer open={wishlistPanel.open} onClose={wishlistPanel.hide} />
     </>
   );
 }
@@ -215,11 +232,58 @@ function AccordionRow({
   );
 }
 
-function IconRow({ icon, label }: { icon: ReactNode; label: string }) {
-  return (
-    <div className="flex items-center gap-3 py-2.5 text-sm text-ink">
+function IconRow({
+  icon,
+  label,
+  count,
+  onClick,
+  href,
+  onNavigate,
+}: {
+  icon: ReactNode;
+  label: string;
+  count?: number;
+  onClick?: () => void;
+  href?: "/login";
+  onNavigate?: () => void;
+}) {
+  const content = (
+    <>
       {icon}
       {label}
-    </div>
+      {!!count && (
+        <span className="flex size-4 items-center justify-center rounded-full bg-olive text-[10px] font-medium text-white">
+          {count}
+        </span>
+      )}
+    </>
+  );
+
+  if (onClick) {
+    return (
+      <button
+        type="button"
+        onClick={onClick}
+        className="flex cursor-pointer items-center gap-3 py-2.5 text-sm text-ink"
+      >
+        {content}
+      </button>
+    );
+  }
+
+  if (href) {
+    return (
+      <Link
+        href={href}
+        onClick={onNavigate}
+        className="flex items-center gap-3 py-2.5 text-sm text-ink"
+      >
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <div className="flex items-center gap-3 py-2.5 text-sm text-ink">{content}</div>
   );
 }
