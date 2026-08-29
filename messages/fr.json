@@ -50,7 +50,12 @@
       "Parasols & accessoires"
     ],
     "moreHeading": "Plus",
-    "moreItems": ["Nouveautés", "Promotions", "Design", "Service"],
+    "moreItems": [
+      "Nouveautés",
+      "Promotions",
+      "Design",
+      "Service"
+    ],
     "furnitureCaption": "Meubles",
     "gardenCaption": "Jardin"
   },
@@ -72,20 +77,60 @@
         "description": "Silhouette enveloppante et bascule apaisante : ce fauteuil en velours invite à la détente dans un salon au style intemporel.",
         "material": "Velours",
         "materialText": "Un velours doux au toucher et résistant à l'usage quotidien, facile d'entretien — un choix intemporel pour un salon chaleureux.",
-        "materialTags": ["Doux au toucher", "Résistant", "Entretien facile"],
+        "materialTags": [
+          "Doux au toucher",
+          "Résistant",
+          "Entretien facile"
+        ],
         "specs": [
-          { "label": "Matériau", "value": "Velours" },
-          { "label": "Accoudoirs", "value": "Oui" },
-          { "label": "Appui-tête", "value": "Oui" },
-          { "label": "Repose-pieds", "value": "Non" },
-          { "label": "Charge maximale", "value": "120 kg" },
-          { "label": "Couleur du corps", "value": "Noir" },
-          { "label": "Matière du corps", "value": "Métal / bois" },
-          { "label": "Profondeur d'assise", "value": "88 cm" },
-          { "label": "Largeur du siège", "value": "67 cm" },
-          { "label": "Hauteur du siège", "value": "95 cm" },
-          { "label": "Largeur du dossier", "value": "49 cm" },
-          { "label": "Fonction bascule", "value": "Oui" }
+          {
+            "label": "Matériau",
+            "value": "Velours"
+          },
+          {
+            "label": "Accoudoirs",
+            "value": "Oui"
+          },
+          {
+            "label": "Appui-tête",
+            "value": "Oui"
+          },
+          {
+            "label": "Repose-pieds",
+            "value": "Non"
+          },
+          {
+            "label": "Charge maximale",
+            "value": "120 kg"
+          },
+          {
+            "label": "Couleur du corps",
+            "value": "Noir"
+          },
+          {
+            "label": "Matière du corps",
+            "value": "Métal / bois"
+          },
+          {
+            "label": "Profondeur d'assise",
+            "value": "88 cm"
+          },
+          {
+            "label": "Largeur du siège",
+            "value": "67 cm"
+          },
+          {
+            "label": "Hauteur du siège",
+            "value": "95 cm"
+          },
+          {
+            "label": "Largeur du dossier",
+            "value": "49 cm"
+          },
+          {
+            "label": "Fonction bascule",
+            "value": "Oui"
+          }
         ]
       },
       "porto": {
@@ -95,16 +140,44 @@
         "description": "Canapé-lit convertible avec coffre de rangement intégré, habillé d'un velours profond pour un salon élégant et fonctionnel.",
         "material": "Velours",
         "materialText": "Un velours profond et généreux, traité pour résister au quotidien tout en gardant tout son éclat au fil des années.",
-        "materialTags": ["Convertible", "Coffre de rangement", "Entretien facile"],
+        "materialTags": [
+          "Convertible",
+          "Coffre de rangement",
+          "Entretien facile"
+        ],
         "specs": [
-          { "label": "Matériau", "value": "Velours" },
-          { "label": "Hauteur du meuble", "value": "88 cm" },
-          { "label": "Largeur du meuble", "value": "198 cm" },
-          { "label": "Profondeur du meuble", "value": "86 cm" },
-          { "label": "Charge maximale", "value": "300 kg" },
-          { "label": "Espace de couchage", "value": "114 × 186 cm" },
-          { "label": "Tissu", "value": "Kronos 19" },
-          { "label": "Coffre de rangement", "value": "Oui" }
+          {
+            "label": "Matériau",
+            "value": "Velours"
+          },
+          {
+            "label": "Hauteur du meuble",
+            "value": "88 cm"
+          },
+          {
+            "label": "Largeur du meuble",
+            "value": "198 cm"
+          },
+          {
+            "label": "Profondeur du meuble",
+            "value": "86 cm"
+          },
+          {
+            "label": "Charge maximale",
+            "value": "300 kg"
+          },
+          {
+            "label": "Espace de couchage",
+            "value": "114 × 186 cm"
+          },
+          {
+            "label": "Tissu",
+            "value": "Kronos 19"
+          },
+          {
+            "label": "Coffre de rangement",
+            "value": "Oui"
+          }
         ]
       },
       "dakota": {
@@ -114,19 +187,56 @@
         "description": "Structure en chêne et assise en tissu bouclé : le fauteuil DAKOTA marie le confort scandinave à une allure sculpturale.",
         "material": "Chêne & tissu",
         "materialText": "Une structure en chêne massif associée à un tissu résistant, pour un fauteuil à la fois robuste et élégant.",
-        "materialTags": ["Bois massif", "Tissu résistant", "Fabrication soignée"],
+        "materialTags": [
+          "Bois massif",
+          "Tissu résistant",
+          "Fabrication soignée"
+        ],
         "specs": [
-          { "label": "Matériau", "value": "Tissu" },
-          { "label": "Accoudoirs", "value": "Oui" },
-          { "label": "Charge maximale", "value": "120 kg" },
-          { "label": "Couleur du corps", "value": "Chêne" },
-          { "label": "Matière du corps", "value": "Métal" },
-          { "label": "Largeur du siège", "value": "46 cm" },
-          { "label": "Profondeur d'assise", "value": "45 cm" },
-          { "label": "Hauteur de la chaise", "value": "81 cm" },
-          { "label": "Largeur du dossier", "value": "48 cm" },
-          { "label": "Hauteur du dossier", "value": "36 cm" },
-          { "label": "Épaisseur du siège", "value": "5 cm" }
+          {
+            "label": "Matériau",
+            "value": "Tissu"
+          },
+          {
+            "label": "Accoudoirs",
+            "value": "Oui"
+          },
+          {
+            "label": "Charge maximale",
+            "value": "120 kg"
+          },
+          {
+            "label": "Couleur du corps",
+            "value": "Chêne"
+          },
+          {
+            "label": "Matière du corps",
+            "value": "Métal"
+          },
+          {
+            "label": "Largeur du siège",
+            "value": "46 cm"
+          },
+          {
+            "label": "Profondeur d'assise",
+            "value": "45 cm"
+          },
+          {
+            "label": "Hauteur de la chaise",
+            "value": "81 cm"
+          },
+          {
+            "label": "Largeur du dossier",
+            "value": "48 cm"
+          },
+          {
+            "label": "Hauteur du dossier",
+            "value": "36 cm"
+          },
+          {
+            "label": "Épaisseur du siège",
+            "value": "5 cm"
+          }
         ]
       }
     },
@@ -163,7 +273,11 @@
       "Contact"
     ],
     "joinHeading": "Nous rejoindre",
-    "joinLinks": ["Club Meubelia", "Carrières", "Nous rendre visite"],
+    "joinLinks": [
+      "Club Meubelia",
+      "Carrières",
+      "Nous rendre visite"
+    ],
     "chat": "Contacter le support"
   },
   "collection": {
@@ -195,5 +309,76 @@
     "returnsText": "Retours gratuits sous 30 jours sur les articles non utilisés, dans leur emballage d'origine.",
     "youMayAlsoLike": "Vous aimerez aussi",
     "thumbnailAlt": "Voir la vue {index} du produit"
+  },
+  "auth": {
+    "pending": "Veuillez patienter…",
+    "or": "Ou",
+    "social": {
+      "apple": "Continuer avec Apple",
+      "google": "Continuer avec Google",
+      "facebook": "Continuer avec Facebook"
+    },
+    "fields": {
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "E-mail",
+      "password": "Mot de passe",
+      "passwordHint": "{min} caractères minimum.",
+      "showPassword": "Afficher le mot de passe",
+      "hidePassword": "Masquer le mot de passe"
+    },
+    "login": {
+      "metaTitle": "Connexion",
+      "metaDescription": "Connectez-vous à votre compte Meubelia pour suivre vos commandes et retrouver vos favoris.",
+      "title": "Connexion",
+      "submit": "Se connecter",
+      "forgot": "Mot de passe oublié ?",
+      "noAccount": "Nouveau chez Meubelia ?",
+      "createAccount": "Créer un compte"
+    },
+    "register": {
+      "metaTitle": "Créer un compte",
+      "metaDescription": "Créez votre compte Meubelia pour commander, suivre vos livraisons et enregistrer vos favoris.",
+      "title": "Créer un compte",
+      "submit": "S'inscrire",
+      "hasAccount": "Vous avez déjà un compte ?",
+      "signIn": "Se connecter",
+      "legal": "En cliquant sur « S'inscrire », vous acceptez les <terms>conditions générales</terms> et la <privacy>politique de confidentialité</privacy>."
+    },
+    "verifyEmail": {
+      "title": "Vérifiez votre adresse e-mail",
+      "body": "Nous avons envoyé un e-mail à {email} afin de vérifier votre adresse et d'activer votre compte. Le lien contenu dans cet e-mail expire dans 24 heures.",
+      "changeLink": "Cliquez ici",
+      "changeHint": "si vous n'avez pas reçu l'e-mail ou si vous souhaitez modifier l'adresse utilisée lors de votre inscription."
+    },
+    "welcome": {
+      "title": "Bienvenue chez Meubelia",
+      "tagline": "L'élégance dans la simplicité, en harmonie avec la nature.",
+      "question": "C'est votre première visite chez Meubelia ?",
+      "cta": "Composez votre intérieur"
+    },
+    "errors": {
+      "nameRequired": "Ce champ est obligatoire.",
+      "nameTooShort": "Ce champ doit contenir au moins 2 caractères.",
+      "emailRequired": "Veuillez indiquer votre adresse e-mail.",
+      "emailInvalid": "Cette adresse e-mail n'est pas valide.",
+      "passwordRequired": "Veuillez saisir votre mot de passe.",
+      "passwordTooShort": "Votre mot de passe doit contenir au moins 8 caractères.",
+      "invalidCredentials": "E-mail ou mot de passe incorrect.",
+      "tooManyAttempts": "Trop de tentatives. Veuillez réessayer dans un instant.",
+      "generic": "Une erreur est survenue. Vérifiez votre connexion et réessayez."
+    }
+  },
+  "common": {
+    "close": "Fermer"
+  },
+  "search": {
+    "placeholder": "Rechercher",
+    "close": "Fermer la recherche",
+    "suggestions": "Suggestions",
+    "categories": "Catégories",
+    "products": "Produits",
+    "viewMore": "Voir plus",
+    "noResults": "Aucun résultat pour « {query} »."
   }
 }
