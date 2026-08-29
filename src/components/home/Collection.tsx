@@ -5,7 +5,7 @@ export function Collection() {
   const t = useTranslations("collection");
 
   return (
-    <section className="px-6 py-16 sm:px-10 sm:py-20">
+    <section id="collection" className="scroll-mt-24 px-6 py-16 sm:px-10 sm:py-20">
       <h2 className="mb-8 font-serif text-3xl font-medium text-ink">
         {t("heading")}
       </h2>

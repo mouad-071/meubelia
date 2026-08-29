@@ -1,5 +1,36 @@
 import type { SVGProps } from "react";
 
+export function CheckCircleIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      {...props}
+    >
+      <circle cx="12" cy="12" r="9" />
+      <path d="m8.5 12.5 2.5 2.5 4.5-5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function AlertCircleIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      {...props}
+    >
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7.5v6" strokeLinecap="round" />
+      <circle cx="12" cy="16.5" r="0.75" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
 export function SearchIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -190,6 +221,116 @@ export function ReturnIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+export function MailIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      {...props}
+    >
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="m4 6.5 8 6 8-6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function PhoneIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      {...props}
+    >
+      <path
+        d="M6 3h2.5l1.5 4-2 1.5a11 11 0 0 0 5.5 5.5L15 12l4 1.5V16a2 2 0 0 1-2 2C11 18 6 13 6 7a2 2 0 0 1 0-4Z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function LocationIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      {...props}
+    >
+      <path
+        d="M12 21s-6.5-5.7-6.5-11A6.5 6.5 0 0 1 18.5 10c0 5.3-6.5 11-6.5 11Z"
+        strokeLinejoin="round"
+      />
+      <circle cx="12" cy="10" r="2.2" />
+    </svg>
+  );
+}
+
+export function GlobeIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      {...props}
+    >
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" />
+    </svg>
+  );
+}
+
+export function BuildingIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      {...props}
+    >
+      <rect x="5" y="3" width="14" height="18" rx="1" />
+      <path d="M9 7h.01M15 7h.01M9 11h.01M15 11h.01M9 15h.01M15 15h.01" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function InfoIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      {...props}
+    >
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 11v5.5" strokeLinecap="round" />
+      <circle cx="12" cy="7.8" r="0.75" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+export function MastercardIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 36 24" {...props}>
+      <circle cx="14" cy="12" r="9" fill="#EB001B" />
+      <circle cx="22" cy="12" r="9" fill="#F79E1B" />
+      <path
+        d="M18 4.8a9 9 0 0 1 0 14.4 9 9 0 0 1 0-14.4Z"
+        fill="#FF5F00"
+      />
+    </svg>
+  );
+}
+
 export function MessageIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -203,6 +344,73 @@ export function MessageIcon(props: SVGProps<SVGSVGElement>) {
         d="M4 5h16v11H9l-5 4V5Z"
         strokeLinecap="round"
         strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function EyeIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M2.5 12S6 5.75 12 5.75 21.5 12 21.5 12 18 18.25 12 18.25 2.5 12 2.5 12Z" />
+      <circle cx="12" cy="12" r="2.75" />
+    </svg>
+  );
+}
+
+export function EyeOffIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M9.9 5.98A9.5 9.5 0 0 1 12 5.75c6 0 9.5 6.25 9.5 6.25a17 17 0 0 1-3.3 3.94M6.4 7.9A16.9 16.9 0 0 0 2.5 12S6 18.25 12 18.25c1.2 0 2.3-.25 3.3-.65" />
+      <path d="M10.1 10.1a2.75 2.75 0 0 0 3.8 3.8" />
+      <path d="m3.5 3.5 17 17" />
+    </svg>
+  );
+}
+
+export function AppleIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M16.36 12.78c.02 2.55 2.24 3.4 2.27 3.41-.02.06-.35 1.2-1.16 2.38-.7 1.02-1.43 2.03-2.58 2.05-1.13.02-1.49-.67-2.78-.67-1.29 0-1.69.65-2.76.69-1.11.04-1.95-1.1-2.66-2.11-1.45-2.1-2.56-5.93-1.07-8.52a4.13 4.13 0 0 1 3.49-2.12c1.09-.02 2.12.73 2.79.73.67 0 1.92-.9 3.24-.77.55.02 2.1.22 3.09 1.68-.08.05-1.85 1.08-1.83 3.25M14.3 4.9c.59-.72 1-1.72.89-2.71-.86.03-1.9.57-2.51 1.29-.55.63-1.03 1.65-.9 2.62.96.08 1.93-.49 2.52-1.2" />
+    </svg>
+  );
+}
+
+/** Google's four-colour mark. Ignores `stroke`/`currentColor` by design. */
+export function GoogleIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" {...props}>
+      <path
+        fill="#4285F4"
+        d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47a5.4 5.4 0 0 1-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82Z"
+      />
+      <path
+        fill="#34A853"
+        d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.28v3.09A11.99 11.99 0 0 0 12 24Z"
+      />
+      <path
+        fill="#FBBC05"
+        d="M5.27 14.29a7.2 7.2 0 0 1 0-4.58V6.62H1.28a12 12 0 0 0 0 10.76l3.99-3.09Z"
+      />
+      <path
+        fill="#EA4335"
+        d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.7 0 3.99 2.47 1.28 6.62l3.99 3.09C6.22 6.86 8.87 4.75 12 4.75Z"
       />
     </svg>
   );
