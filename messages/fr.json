@@ -396,6 +396,7 @@
     "backToCart": "Retour au panier",
     "emptyRedirectText": "Votre panier est vide.",
     "browseCollection": "Découvrir la collection"
+  },
   "auth": {
     "pending": "Veuillez patienter…",
     "or": "Ou",

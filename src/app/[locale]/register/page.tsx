@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { SiteHeader } from "@/components/layout/SiteHeader";
-import { Footer } from "@/components/layout/Footer";
 import { AuthLayout } from "@/components/auth/AuthLayout";
 import { RegisterForm } from "@/components/auth/RegisterForm";
 import { routing } from "@/i18n/routing";
@@ -33,14 +31,10 @@ export default async function RegisterPage({
   const t = await getTranslations("auth.register");
 
   return (
-    <>
-      <SiteHeader />
-      <main className="flex-1 bg-white">
-        <AuthLayout title={t("title")}>
-          <RegisterForm />
-        </AuthLayout>
-      </main>
-      <Footer />
-    </>
+    <div className="bg-white">
+      <AuthLayout title={t("title")}>
+        <RegisterForm />
+      </AuthLayout>
+    </div>
   );
 }

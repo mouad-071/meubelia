@@ -396,6 +396,7 @@
     "backToCart": "Back To Cart",
     "emptyRedirectText": "Your cart is empty.",
     "browseCollection": "Discover the collection"
+  },
   "auth": {
     "pending": "Please wait…",
     "or": "Or",

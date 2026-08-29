@@ -7,14 +7,10 @@ import { WelcomeDialog } from "@/components/home/WelcomeDialog";
 export default function HomePage() {
   return (
     <>
-      <SiteHeader />
-      <main className="flex-1">
-        <Hero />
-        <Collection />
-        <BestSellers />
-        <Sustainability />
-      </main>
-      <Footer />
+      <Hero />
+      <Collection />
+      <BestSellers />
+      <Sustainability />
       <WelcomeDialog />
     </>
   );
