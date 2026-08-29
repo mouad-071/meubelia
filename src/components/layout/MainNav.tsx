@@ -3,12 +3,15 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { ChevronDownIcon } from "@/components/icons";
+import { useOverlayTrigger } from "@/lib/overlay-context";
 import { MegaMenu } from "./MegaMenu";
 
 export function MainNav() {
   const t = useTranslations("nav");
   const [open, setOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
+
+  useOverlayTrigger(open);
 
   useEffect(() => {
     if (!open) return;

@@ -11,6 +11,9 @@ import {
   UserIcon,
   HeartIcon,
 } from "@/components/icons";
+import { useOverlayTrigger } from "@/lib/overlay-context";
+import { useWishlist } from "@/lib/wishlist-context";
+import { WishlistDrawer } from "@/components/wishlist/WishlistDrawer";
 
 type Section = "furniture" | "garden" | null;
 
@@ -25,6 +28,10 @@ export function MobileMenu() {
 
   const [open, setOpen] = useState(false);
   const [section, setSection] = useState<Section>(null);
+  const [wishlistOpen, setWishlistOpen] = useState(false);
+  const wishlist = useWishlist();
+
+  useOverlayTrigger(open);
 
   useEffect(() => {
     if (!open) return;
@@ -122,6 +129,13 @@ export function MobileMenu() {
 
           <AnimatedRow open={open} index={rowIndex++}>
             <div className="flex flex-col py-2">
+              <IconRow icon={<UserIcon className="size-4" />} label={t("account")} />
+              <IconRow
+                icon={<HeartIcon className="size-4" />}
+                label={t("wishlist")}
+                count={wishlist.count}
+                onClick={() => setWishlistOpen(true)}
+              />
               <IconRow
                 icon={<UserIcon className="size-4" />}
                 label={t("account")}
@@ -158,6 +172,8 @@ export function MobileMenu() {
           </div>
         </AnimatedRow>
       </div>
+
+      <WishlistDrawer open={wishlistOpen} onClose={() => setWishlistOpen(false)} />
     </>
   );
 }
@@ -223,6 +239,13 @@ function AccordionRow({
 function IconRow({
   icon,
   label,
+  count,
+  onClick,
+}: {
+  icon: ReactNode;
+  label: string;
+  count?: number;
+  onClick?: () => void;
   href,
   onNavigate,
 }: {
@@ -235,6 +258,23 @@ function IconRow({
     <>
       {icon}
       {label}
+      {!!count && (
+        <span className="flex size-4 items-center justify-center rounded-full bg-olive text-[10px] font-medium text-white">
+          {count}
+        </span>
+      )}
+    </>
+  );
+
+  if (onClick) {
+    return (
+      <button
+        type="button"
+        onClick={onClick}
+        className="flex cursor-pointer items-center gap-3 py-2.5 text-sm text-ink"
+      >
+        {content}
+      </button>
     </>
   );
 

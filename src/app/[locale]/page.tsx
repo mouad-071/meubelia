@@ -1,5 +1,3 @@
-import { SiteHeader } from "@/components/layout/SiteHeader";
-import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/home/Hero";
 import { Collection } from "@/components/home/Collection";
 import { BestSellers } from "@/components/home/BestSellers";

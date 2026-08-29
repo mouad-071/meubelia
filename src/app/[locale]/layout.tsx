@@ -6,6 +6,12 @@ import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { siteUrl } from "@/lib/env";
+import { CartProvider } from "@/lib/cart-context";
+import { WishlistProvider } from "@/lib/wishlist-context";
+import { OverlayProvider } from "@/lib/overlay-context";
+import { AppHeader } from "@/components/layout/AppHeader";
+import { Footer } from "@/components/layout/Footer";
+import { BlurTarget } from "@/components/layout/BlurTarget";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -69,7 +75,19 @@ export default async function LocaleLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${cormorant.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-cream text-ink">
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <CartProvider>
+            <WishlistProvider>
+              <OverlayProvider>
+                <AppHeader />
+                <BlurTarget>
+                  <main className="flex-1">{children}</main>
+                  <Footer />
+                </BlurTarget>
+              </OverlayProvider>
+            </WishlistProvider>
+          </CartProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

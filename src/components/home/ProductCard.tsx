@@ -5,19 +5,29 @@ import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { HeartIcon } from "@/components/icons";
-import { colorSwatches, type Product } from "@/lib/products";
+import { colorSwatches, type ColorKey, type Product } from "@/lib/products";
+import { formatPrice } from "@/lib/format-price";
+import { useWishlist } from "@/lib/wishlist-context";
 
-export function ProductCard({ product }: { product: Product }) {
+export function ProductCard({
+  product,
+  initialColor,
+}: {
+  product: Product;
+  initialColor?: ColorKey;
+}) {
   const t = useTranslations("bestSellers");
   const locale = useLocale();
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [wished, setWished] = useState(false);
+  const wishlist = useWishlist();
+  const [activeIndex, setActiveIndex] = useState(() => {
+    if (!initialColor) return 0;
+    const index = product.variants.findIndex((v) => v.color === initialColor);
+    return index === -1 ? 0 : index;
+  });
 
   const active = product.variants[activeIndex];
-  const price = new Intl.NumberFormat(locale === "fr" ? "fr-FR" : "en-US", {
-    style: "currency",
-    currency: "EUR",
-  }).format(active.price);
+  const price = formatPrice(active.price, locale);
+  const wished = wishlist.isWished(product.slug, active.color);
 
   return (
     <div className="group">
@@ -44,7 +54,7 @@ export function ProductCard({ product }: { product: Product }) {
         </Link>
         <button
           type="button"
-          onClick={() => setWished((v) => !v)}
+          onClick={() => wishlist.toggle(product.slug, active.color)}
           aria-label={t("addToWishlist")}
           aria-pressed={wished}
           className="absolute top-3 right-3 flex size-8 items-center justify-center rounded-full bg-white/90 text-ink cursor-pointer"

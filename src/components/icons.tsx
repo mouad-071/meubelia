@@ -1,5 +1,36 @@
 import type { SVGProps } from "react";
 
+export function CheckCircleIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      {...props}
+    >
+      <circle cx="12" cy="12" r="9" />
+      <path d="m8.5 12.5 2.5 2.5 4.5-5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function AlertCircleIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      {...props}
+    >
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7.5v6" strokeLinecap="round" />
+      <circle cx="12" cy="16.5" r="0.75" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
 export function SearchIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -185,6 +216,116 @@ export function ReturnIcon(props: SVGProps<SVGSVGElement>) {
         d="M4 7h11a5 5 0 0 1 0 10H9M4 7l4-4M4 7l4 4"
         strokeLinecap="round"
         strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function MailIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      {...props}
+    >
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="m4 6.5 8 6 8-6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function PhoneIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      {...props}
+    >
+      <path
+        d="M6 3h2.5l1.5 4-2 1.5a11 11 0 0 0 5.5 5.5L15 12l4 1.5V16a2 2 0 0 1-2 2C11 18 6 13 6 7a2 2 0 0 1 0-4Z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function LocationIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      {...props}
+    >
+      <path
+        d="M12 21s-6.5-5.7-6.5-11A6.5 6.5 0 0 1 18.5 10c0 5.3-6.5 11-6.5 11Z"
+        strokeLinejoin="round"
+      />
+      <circle cx="12" cy="10" r="2.2" />
+    </svg>
+  );
+}
+
+export function GlobeIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      {...props}
+    >
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" />
+    </svg>
+  );
+}
+
+export function BuildingIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      {...props}
+    >
+      <rect x="5" y="3" width="14" height="18" rx="1" />
+      <path d="M9 7h.01M15 7h.01M9 11h.01M15 11h.01M9 15h.01M15 15h.01" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function InfoIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      {...props}
+    >
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 11v5.5" strokeLinecap="round" />
+      <circle cx="12" cy="7.8" r="0.75" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+export function MastercardIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 36 24" {...props}>
+      <circle cx="14" cy="12" r="9" fill="#EB001B" />
+      <circle cx="22" cy="12" r="9" fill="#F79E1B" />
+      <path
+        d="M18 4.8a9 9 0 0 1 0 14.4 9 9 0 0 1 0-14.4Z"
+        fill="#FF5F00"
       />
     </svg>
   );
