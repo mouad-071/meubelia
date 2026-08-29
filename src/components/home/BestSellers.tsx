@@ -6,7 +6,7 @@ export function BestSellers() {
   const t = useTranslations("bestSellers");
 
   return (
-    <section className="px-6 py-16 sm:px-10 sm:py-20">
+    <section id="best-sellers" className="scroll-mt-24 px-6 py-16 sm:px-10 sm:py-20">
       <div className="mb-8 flex items-end justify-between">
         <h2 className="font-serif text-3xl font-medium text-ink">
           {t("heading")}

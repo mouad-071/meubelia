@@ -4,23 +4,25 @@ import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { HeartIcon, ReturnIcon } from "@/components/icons";
 import { colorSwatches, type Product } from "@/lib/products";
+import { formatPrice } from "@/lib/format-price";
+import { useCart } from "@/lib/cart-context";
+import { useWishlist } from "@/lib/wishlist-context";
 import { Accordion } from "./Accordion";
 
 export function ProductInfo({ product }: { product: Product }) {
   const t = useTranslations("bestSellers");
   const td = useTranslations("productDetail");
   const locale = useLocale();
+  const cart = useCart();
+  const wishlist = useWishlist();
 
   const [colorIndex, setColorIndex] = useState(0);
   const [qty, setQty] = useState(1);
   const [added, setAdded] = useState(false);
-  const [wished, setWished] = useState(false);
 
   const variant = product.variants[colorIndex];
-  const price = new Intl.NumberFormat(locale === "fr" ? "fr-FR" : "en-US", {
-    style: "currency",
-    currency: "EUR",
-  }).format(variant.price);
+  const price = formatPrice(variant.price, locale);
+  const wished = wishlist.isWished(product.slug, variant.color);
 
   const specs = t.raw(`products.${product.slug}.specs`) as {
     label: string;
@@ -29,6 +31,7 @@ export function ProductInfo({ product }: { product: Product }) {
   const materialTags = t.raw(`products.${product.slug}.materialTags`) as string[];
 
   function handleAddToCart() {
+    cart.addItem(product.slug, variant.color, qty);
     setAdded(true);
     window.setTimeout(() => setAdded(false), 2000);
   }
@@ -111,7 +114,7 @@ export function ProductInfo({ product }: { product: Product }) {
         </span>
         <button
           type="button"
-          onClick={() => setWished((v) => !v)}
+          onClick={() => wishlist.toggle(product.slug, variant.color)}
           aria-pressed={wished}
           className="flex cursor-pointer items-center gap-1.5 hover:text-ink"
         >

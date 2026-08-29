@@ -1,5 +1,3 @@
-import { SiteHeader } from "@/components/layout/SiteHeader";
-import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/home/Hero";
 import { Collection } from "@/components/home/Collection";
 import { BestSellers } from "@/components/home/BestSellers";
@@ -8,14 +6,10 @@ import { Sustainability } from "@/components/home/Sustainability";
 export default function HomePage() {
   return (
     <>
-      <SiteHeader />
-      <main className="flex-1">
-        <Hero />
-        <Collection />
-        <BestSellers />
-        <Sustainability />
-      </main>
-      <Footer />
+      <Hero />
+      <Collection />
+      <BestSellers />
+      <Sustainability />
     </>
   );
 }

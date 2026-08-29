@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
-import { SiteHeader } from "@/components/layout/SiteHeader";
-import { Footer } from "@/components/layout/Footer";
 import { Breadcrumb } from "@/components/product/Breadcrumb";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { ProductInfo } from "@/components/product/ProductInfo";
@@ -46,24 +44,20 @@ export default async function ProductPage({
 
   return (
     <>
-      <SiteHeader />
-      <main className="flex-1">
-        <Breadcrumb
-          categoryLabel={t(`products.${product.slug}.categoryLabel`)}
+      <Breadcrumb
+        categoryLabel={t(`products.${product.slug}.categoryLabel`)}
+        productName={t(`products.${product.slug}.name`)}
+      />
+
+      <div className="grid grid-cols-1 gap-10 px-6 pb-16 sm:px-10 sm:pb-20 lg:grid-cols-2 lg:gap-16">
+        <ProductGallery
+          images={product.gallery}
           productName={t(`products.${product.slug}.name`)}
         />
+        <ProductInfo product={product} />
+      </div>
 
-        <div className="grid grid-cols-1 gap-10 px-6 pb-16 sm:px-10 sm:pb-20 lg:grid-cols-2 lg:gap-16">
-          <ProductGallery
-            images={product.gallery}
-            productName={t(`products.${product.slug}.name`)}
-          />
-          <ProductInfo product={product} />
-        </div>
-
-        <RelatedProducts excludeSlug={product.slug} />
-      </main>
-      <Footer />
+      <RelatedProducts excludeSlug={product.slug} />
     </>
   );
 }

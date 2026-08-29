@@ -127,3 +127,10 @@ export const products: Product[] = [
 export function getProduct(slug: string): Product | undefined {
   return products.find((product) => product.slug === slug);
 }
+
+export function getVariant(
+  product: Product,
+  color: ColorKey,
+): ProductVariant | undefined {
+  return product.variants.find((variant) => variant.color === color);
+}
